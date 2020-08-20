@@ -1,0 +1,28 @@
+### Testes utilizando o Rest Client Plugin VS Code
+GET http://localhost:3333/repositories HTTP/1.1
+
+###
+POST http://localhost:3333/repositories HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Express Framework",
+    "url": "www.expresjs.com",
+    "techs": ["Back-end", "JavaScript"]
+}
+
+###
+PUT http://localhost:3333/repositories/2f719cd7-3154-4a01-9a66-60505983cd0e HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Express Framework v2.0",
+    "url": "www.expresjs.com",
+    "techs": ["Back-end", "JavaScript"]
+}
+
+###
+POST http://localhost:3333/repositories/2f719cd7-3154-4a01-9a66-60505983cd0e/like HTTP/1.1
+
+###
+DELETE http://localhost:3333/repositories/2f719cd7-3154-4a01-9a66-60505983cd0e HTTP/1.1
